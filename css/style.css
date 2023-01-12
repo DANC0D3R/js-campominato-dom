@@ -1,0 +1,246 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REGOLE GENERALI */
+:root{
+    --background-color: #121F30;
+    --pink-color: #f201ef;
+
+    --alert-red: #a62839;
+    --success-green: #49AF41;
+
+    --cell-for-row: 10;
+}
+
+.d-none{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.h-100{
+    height: 100%;
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.text-pink{
+    color: #F201EF;
+}
+
+.red-bg{
+    background-color: var(--alert-red)
+}
+
+.green-bg{
+    background-color: var(--success-green)
+}
+
+
+/* ----- HEADER ------ */
+header{
+    height: 10vh;
+    padding: 1rem;
+
+    background-color: #FFFFFF;
+}
+
+header a{
+    text-decoration: none;
+    
+    color: #000000;
+}
+
+header h1{
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+}
+
+header img{
+    width: 80px;
+    margin-right: 1rem;
+}
+
+label{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    
+    color: #121F30;
+}
+
+#difficulty{
+    margin: 5px;
+    padding: 5px 10px;
+
+    border: 3px solid #121F30;
+    border-radius: 30px;
+
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#play{
+    margin: 0 10px;
+    padding: 5px 10px;
+
+    border: 3px solid #121F30;
+    border-radius: 30px;
+
+    background-color: #F201EF;
+
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* ----- MAIN ----- */
+main{
+    height: 82vh;
+    padding: 2rem;
+
+    font-family: 'Press Start 2P', cursive;
+
+    color: #FFFFFF;
+    background-color: var(--background-color);
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+.grid{
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    width: 60vh;
+    height: 60vh;
+    
+    border: 1px solid var(--pink-color);
+}
+
+.cell{
+    width: calc(100% / var(--cell-for-row));
+    height: calc(100% / var(--cell-for-row));
+
+    border: 1px solid var(--pink-color);
+
+    background-color: var(--background-color);
+
+    cursor: pointer;
+}
+
+.clicked{
+    background-color: #000DBD;
+
+    cursor: not-allowed;
+}
+
+.clicked.bomb{
+    background-color: #A10000;
+}
+
+.bomb img{
+    max-width: 50%;
+}
+
+#message{
+    height: 30px;
+    line-height: 30px;
+}
+
+/* MODALE */
+#modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modal .box{
+    padding: 50px;
+
+    border-radius: 5px;
+
+    background-color: #FFFFFF;
+}
+
+#modal .buttons{
+    gap: 20px
+}
+
+#modal .btn{
+    width: 80px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 3px;
+
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+    
+    transition: filter 0.5s;
+}
+
+#modal .btn:hover{
+    filter: brightness(1.2);
+}
+
+/* ----- FOOTER ----- */
+footer{
+    height: 8vh;
+    padding: 1rem;
+
+    background-color: #FFFFFF;
+}
+
+footer h4 a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Daniele Minieri">
+        <title>Campo Minato</title>
+        
+        <!-- Stile -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="img/logo.png">
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="flex align-center justify-between">
+            <a href="#" class="flex align-center"><img src="img/logo.png" alt="Logo"> <h1>Campo Minato</h1></a>
+            <nav class="flex align-center">
+                <!-- Selettore Dificoltà -->
+                <label for="difficulty">Difficoltà:</label>
+                <select name="difficulty" id="difficulty">
+                    <option value="10" selected>Facile</option>
+                    <option value="9">Normale</option>
+                    <option value="7">Difficile</option>
+                </select>
+                <!-- Pulsante Avvia Partita -->
+                <button type="button" id="play">Gioca</button>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <div class="container h-100 flex align-center justify-center flex-column">
+                <h1>premi su <span class="text-pink">gioca</span> per iniziare</h1>
+                <!-- Griglia -->
+                <h3 id="score" class="d-none mb-30">Punteggio: 0</h3>
+                <div class="grid d-none mb-30">
+                    
+                </div>
+                <h3 id="message"></h3>
+                <!-- Modale -->
+                <div id="modal" class="d-none justify-center align-center">
+                    <div class="box">
+                    <h3 class="mb-30">Sei sicuro di voler iniziare un'altra partita?</h3>
+                    <div class="buttons flex justify-center"><button class="btn green-bg" id="yes-btn">SI</button><button class="btn red-bg" id="no-btn">NO</button></div>
+                    </div>
+                </div>  
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="flex align-center">
+            <h4>Made with &hearts; by <a href="#">Boolean</a></h4>
+        </footer>
+        <!-- Script -->
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
